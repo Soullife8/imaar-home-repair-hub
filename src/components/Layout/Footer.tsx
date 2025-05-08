@@ -1,12 +1,12 @@
 
 import React from "react";
-import { Building } from "lucide-react";
+import { Building, Mail, Phone, CreditCard, Wallet, BanknoteIcon } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-imaar-dark text-white mt-auto">
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Building className="h-8 w-8 text-imaar-primary" />
@@ -37,10 +37,34 @@ const Footer: React.FC = () => {
           
           <div>
             <h3 className="font-bold text-lg mb-4">تواصل معنا</h3>
-            <ul className="space-y-2">
-              <li>البريد الإلكتروني: info@imaar.org</li>
-              <li>الهاتف: +963-XX-XXXXXXX</li>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-imaar-primary" />
+                <span>البريد الإلكتروني: soullife89@hotmail.com</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-imaar-primary" />
+                <span>الهاتف: +963993214616</span>
+              </li>
               <li>العنوان: دير الزور، سوريا</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="font-bold text-lg mb-4">طرق الدفع</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2">
+                <BanknoteIcon className="h-4 w-4 text-imaar-primary" />
+                <span>التحويل البنكي: بنك سوريا المركزي - رقم الحساب: 9834-7261-0012</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Wallet className="h-4 w-4 text-imaar-primary" />
+                <span>المحفظة الإلكترونية: PayPal - imaar@rebuild.org</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CreditCard className="h-4 w-4 text-imaar-primary" />
+                <span>بطاقات الائتمان: Visa / Mastercard</span>
+              </li>
             </ul>
           </div>
         </div>
