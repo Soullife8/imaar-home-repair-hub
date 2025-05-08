@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -12,7 +11,7 @@ const RequestForm: React.FC = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "+963993214616",
-    email: "",
+    email: "soullife89@hotmail.com",
     address: "",
     description: "",
     images: [] as File[]
