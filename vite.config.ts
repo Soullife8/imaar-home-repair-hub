@@ -1,3 +1,4 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -18,5 +19,13 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  // تكوينات البناء لـ Capacitor
+  build: {
+    outDir: 'dist',
+    target: 'es2015',
+    // تحسينات إضافية للبناء عند الإنتاج
+    minify: 'terser',
+    cssCodeSplit: true
   },
 }));

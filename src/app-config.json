@@ -1,0 +1,15 @@
+
+{
+  "name": "إعمار",
+  "shortName": "إعمار",
+  "description": "منصة لربط سكان المناطق المتضررة مع مهندسين وورشات عمل لإعادة إعمار المنازل المتضررة",
+  "themeColor": "#257558",
+  "backgroundColor": "#ffffff",
+  "icons": [
+    {
+      "src": "app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
