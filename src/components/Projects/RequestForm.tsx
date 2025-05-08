@@ -6,12 +6,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Upload, MapPin, Check } from "lucide-react";
+import { Upload, MapPin, Check, Phone, Mail } from "lucide-react";
 
 const RequestForm: React.FC = () => {
   const [formData, setFormData] = useState({
     fullName: "",
-    phone: "",
+    phone: "+963993214616",
+    email: "",
     address: "",
     description: "",
     images: [] as File[]
@@ -81,13 +82,38 @@ const RequestForm: React.FC = () => {
               
               <div className="space-y-2">
                 <Label htmlFor="phone">رقم الهاتف</Label>
+                <div className="flex">
+                  <div className="flex-shrink-0 flex items-center px-3 border border-r-0 rounded-l-md bg-gray-50">
+                    <Phone className="h-4 w-4 text-gray-500" />
+                  </div>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    className="rounded-l-none"
+                  />
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-2">
+              <Label htmlFor="email">البريد الإلكتروني</Label>
+              <div className="flex">
+                <div className="flex-shrink-0 flex items-center px-3 border border-r-0 rounded-l-md bg-gray-50">
+                  <Mail className="h-4 w-4 text-gray-500" />
+                </div>
                 <Input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  value={formData.phone}
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
                   onChange={handleChange}
                   required
+                  className="rounded-l-none"
+                  placeholder="example@mail.com"
                 />
               </div>
             </div>
