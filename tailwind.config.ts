@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,20 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				// Imaar-specific colors
+				imaar: {
+					primary: '#4D774E',    // Forest green
+					secondary: '#8B5E34',  // Earth brown
+					accent: '#1976D2',     // Blue accent
+					light: '#F9F7F7',      // Off-white
+					dark: '#303030',       // Dark gray
+					warning: '#F2994A',    // Warning orange
+					success: '#6FCF97',    // Success green
 				}
+			},
+			fontFamily: {
+				'sans': ['Cairo', 'sans-serif'],
+				'body': ['Cairo', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
